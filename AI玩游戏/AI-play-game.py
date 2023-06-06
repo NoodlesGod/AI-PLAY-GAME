@@ -97,7 +97,7 @@ def train_network(s, readout, sess):
 
     saver = tf.train.Saver()
     sess.run(tf.initialize_all_variables())
-    checkpoint = tf.train.get_checkpoint_state("model/best/after")
+    checkpoint = tf.train.get_checkpoint_state("model/best")
 
     if checkpoint and checkpoint.model_checkpoint_path:
         print(saver.restore(sess, checkpoint.model_checkpoint_path))
